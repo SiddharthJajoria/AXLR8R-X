@@ -1,0 +1,653 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar */
+.navbar {
+  background-color: #232323;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  z-index: 2;
+}
+
+.first-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30%;
+  justify-content: flex-start;
+}
+
+.img-box {
+  margin: 0;
+}
+
+.brand-logo1 {
+  width: 15rem;
+  margin: 0;
+  margin-left: 3rem;
+  position: relative;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.nav-brand {
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: bold;
+  transition: color .3s;
+}
+
+.second-nav {
+  position: relative;
+  width: 70%;
+}
+
+.nav-list {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-element {
+  list-style: none;
+  padding: 1rem 2rem;
+  transition: all .3s;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.nav-element:hover {
+  background-color: #f20045;
+  transform: scale(1.2);
+}
+
+.nav-brand:hover {
+  color: #f20045;
+}
+
+/* end of navbar */
+/* banner */
+.banner1{
+  background-image:url('20190810-15-31-18-4552-schulz-2-1353x762.jpg');
+  background-position: center;
+  width:100%;
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(90%);
+
+}
+/* .banner-img {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-size: cover;
+  filter: grayscale(100%);
+  margin: 0;
+  position: relative;
+  top: 10rem;
+} */
+
+.ques {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: #f20045;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10rem;
+  width: 70%;
+  transition: all .5s;
+  animation: fade .3s forwards;
+}
+
+.hover-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(65deg, black 50%, #f20045 50%);
+  transition: opacity .4s;
+  padding: 3rem;
+  line-height: 2;
+}
+
+.btn-box {
+  margin: 2rem;
+}
+
+.btn-box button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 5rem;
+  background: transparent;
+  border: none;
+  border: .1rem solid #f20045;
+  border-radius: 50rem;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  transition: color .3s;
+  cursor: pointer;
+  top: 2rem;
+}
+.btn-box button:focus{
+  outline: none;
+}
+.btn-box button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f20045;
+  transition: width .3s;
+  z-index: -1;
+}
+
+.btn-box button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f20045;
+  transition: width .3s;
+  z-index: -1;
+}
+
+.btn-box button:hover:after, .btn-box button:hover:before {
+  width: 51%;
+}
+
+.btn-box button:hover {
+  color: white;
+}
+
+.banner:hover .content .ques {
+  top: 20%;
+  color:white;
+}
+
+.banner:hover .content .hover-content {
+  opacity: 0.7;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* end of banner */
+/* sponsors */
+.sponsors {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.sponsor-heading {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 7rem;
+}
+
+.sponsor {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #f20045;
+  font-size: 4rem;
+  margin-top: 10rem;
+  margin-bottom: 0;
+  text-decoration: overline underline;
+}
+
+.Gold .sponsor {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.Platinum-img, .Gold-img, .Silver-img {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 400%;
+  animation: slide 40s infinite;
+}
+
+.brand-logo {
+  width: 45%;
+  overflow: hidden;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: -200%;
+  }
+
+  50% {
+    left: -300%;
+  }
+
+  75% {
+    left: -200%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.Platinum-img:hover,
+.Gold-img:hover,
+.Silver-img:hover {
+  animation-play-state: paused;
+}
+
+/* end of sponsors */
+/* responsive design */
+@media (max-width:1330px) {
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .ques {
+    font-size: 8rem;
+  }
+
+  .banner:hover .content .ques {
+    top: 16%;
+  }
+}
+
+@media (max-width:1280px) {
+  .second-nav {
+    width: 60%;
+  }
+
+  .nav-element {
+    list-style: none;
+    padding: 1rem 1rem;
+    transition: background-color .3s;
+  }
+
+  .nav-element:hover {
+    background-color: #f20045;
+    transform: scale(1);
+  }
+
+  .hover-content {
+    line-height: 1.8;
+  }
+
+  .banner:hover .content .ques {
+    top: 18%;
+  }
+}
+
+@media (max-width:1180px) {
+  .brand-logo1 {
+    width: 13rem;
+  }
+}
+
+@media (max-width:1160px) {
+  .hover-content {
+    width: 80%;
+    top: 56%;
+  }
+
+  .brand-logo1 {
+    width: 11rem;
+  }
+}
+
+@media (max-width:1064px) {
+  .ques {
+    font-size: 7rem;
+  }
+
+  .second-nav {
+    margin-right: 2rem;
+  }
+
+  .brand-logo1 {
+    width: 11rem;
+  }
+}
+
+@media (max-width:1035px) {
+  .banner-img {
+    height: 70vh;
+
+  }
+
+  .second-nav {
+    position: absolute;
+    width: 100%;
+    top: -500%;
+    transition: top .5s ease-out;
+  }
+
+  .nav-list {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f20045;
+    width: 100vw;
+    left: 0;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .first-nav {
+    width: 80%;
+  }
+
+  .nav-link {
+    color: black;
+  }
+
+  .brand-logo1 {
+    width: 10rem;
+  }
+
+  .nav-brand {
+    font-size: 2rem;
+  }
+  .nav-element{
+    transition:background-color .2s;
+  }
+  .nav-element:hover {
+    background-color: white;
+  }
+
+  .ham-menu {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: .2rem;
+    background-color: #f20045;
+    border-radius: .1rem;
+  }
+
+  .line-1, .line-3 {
+    transition: all .3s;
+  }
+
+  .line-2 {
+    transition: opacity .3s;
+  }
+
+  .btn-box button {
+    top: 4rem;
+  }
+
+  #check:checked~.navbar .second-nav {
+    top: 10rem;
+  }
+
+  #check:checked+label .ham-menu .line-1 {
+    transform: rotate(-405deg) translate(-.7rem, .6rem);
+    background-color: white;
+  }
+
+  #check:checked+label .ham-menu .line-3 {
+    transform: rotate(405deg) translate(-.7rem, -.6rem);
+    background-color: white;
+  }
+
+  #check:checked+label .ham-menu .line-2 {
+    opacity: 0;
+  }
+}
+
+@media (max-width:970px) {
+  .hover-content {
+    top:60%;
+  }
+}
+@media (max-width:935px) {
+  .ques{
+    font-size: 6.5rem;
+  }
+  .sponsor-heading{
+    margin-top: 7rem;
+  }
+}
+@media (max-width:870px) {
+  .ques{
+    font-size: 5.6rem;
+  }
+  .btn-box button {
+    width:40%;
+  }
+}
+@media (max-width:800px) {
+  .banner-img{
+    height:65vh;
+  }
+  .ques{
+    top:40%;
+  }
+  .hover-content{
+    font-size:1.6rem;
+    line-height:2.2;
+    top:58%;
+  }
+}
+@media (max-width:753px) {
+  .ques{
+    font-size: 5.2rem;
+  }
+}
+@media (max-width:704px) {
+  .ques{
+    font-size: 5rem;
+  }
+  .sponsor-heading{
+    font-size: 5.5rem;
+  }
+  .sponsor{
+    font-size: 3rem;
+  }
+}
+@media (max-width:676px) {
+  .hover-content{
+    font-size: 1.7rem;
+    line-height: 2;
+  }
+  .ques{
+    top:47%;
+    width:75%;
+  }
+  .btn-box button {
+    width:45%;
+  }
+}
+@media (max-width:629px) {
+  .ques{
+    width:77%;
+    left:50%;
+  }
+}
+@media (max-width:614px) {
+  .ques{
+    width:79%;
+  }
+  .banner:hover .content .ques {
+    top: 15%;
+    color:white;
+  }
+}
+@media (max-width:600px) {
+  .ques{
+    width:80%;
+  }
+  .btn-box button {
+    font-size:1.2rem;
+    width:55%;
+  }
+}
+@media (max-width:592px) {
+  .banner-img{
+    height:50vh;
+  }
+  .ques{
+    top:47%;
+    font-size:4.4rem;
+    left:55%;
+  }
+
+  .hover-content{
+    font-size: 2rem;
+    top:57%;
+    line-height: 1.5;
+    width:80%;
+  }
+  .banner:hover .content .ques {
+    top: 13%;
+    color:white;
+  }
+  .sponsor-heading{
+    font-size: 4.5rem;
+  }
+}
+@media (max-width:548px) {
+  .hover-content{
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
+}
+@media (max-width:505px) {
+  .nav-brand{
+    font-size: 1.5rem;
+  }
+  .ques{
+    font-size: 4.2rem;
+    left:50%;
+  }
+  .hover-content{
+    line-height: 2;
+  }
+}
+@media (max-width:477px) {
+  .ques{
+    font-size: 3.9rem;
+    left: 50%;
+  }
+  .sponsor-heading{
+    font-size: 4.1rem;
+  }
+  .sponsor{
+    font-size: 3rem;
+  }
+}
+@media (max-width:457px) {
+    .btn-box button {
+      width:60%;
+    }
+    .ques{
+      width:85%;
+      left:52%;
+    }
+}
+@media (max-width:429px) {
+  .nav-brand{
+    font-size: 1.2rem;
+  }
+  .ques{
+    font-size: 3.6rem;
+    left:54%;
+  }
+  .hover-content{
+    line-height: 1.7;
+  }
+  .ham-menu{
+    width:2rem;
+    height:2rem;
+  }
+  .btn-box button {
+    width:65%;
+  }
+  .banner-img{
+    width:500%;
+  }
+  #check:checked+label .ham-menu .line-1 {
+    transform: rotate(-405deg) translate(-.5rem, .5rem);
+    background-color: white;
+  }
+
+  #check:checked+label .ham-menu .line-3 {
+    transform: rotate(405deg) translate(-.5rem, -.5rem);
+    background-color: white;
+  }
+  .sponsor-heading{
+    position: relative;
+    top:4rem;
+  }
+  .sponsor{
+    font-size:2rem;
+  }
+  .banner:hover .content .ques {
+    top: 17%;
+    color:white;
+  }
+}
+/* end of responsive design */
